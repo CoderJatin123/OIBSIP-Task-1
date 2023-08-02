@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Unify App</string>
+    <string-array name="length">
+        <item>Meter</item>
+        <item>Centimeter</item>
+        <item>Kilometer</item>
+    </string-array>
+</resources>
