@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#C353B5FC</color>
+    <color name="dark_blue">#48A3E4</color>
+    <color name="pink">#ABFF557E</color>
+    <color name="text_primary_dark">#CFCFCF</color>
+    <color name="text_primary">#DADADA</color>
+    <color name="card">#212122</color>
+    <color name="background">#212122</color>
+</resources>

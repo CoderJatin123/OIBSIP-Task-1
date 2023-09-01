@@ -42,12 +42,23 @@ public class MainActivity extends AppCompatActivity {
                 viewModel.clear();
                 viewModel.setConversionType((String) adapterView.getAdapter().getItem(i));
                 if(i==0){
+                    dropdown_input_1.setText(dropdown_length[0]);
+                    dropdown_input_2.setText(dropdown_length[1]);
+                    viewModel.setUnit_1(dropdown_length[0]);
+                    viewModel.setUnit_2(dropdown_length[1]);
+
                     dropdown_input_1.setAdapter(input_1_length_adapter);
                     dropdown_input_2.setAdapter(input_1_length_adapter);
+
                 }
                 else if(i==1){
+                    dropdown_input_1.setText(dropdown_weight[0]);
+                    dropdown_input_2.setText(dropdown_weight[1]);
                     dropdown_input_1.setAdapter(input_1_weight_adapter);
                     dropdown_input_2.setAdapter(input_1_weight_adapter);
+
+                    viewModel.setUnit_1(dropdown_weight[0]);
+                    viewModel.setUnit_2(dropdown_weight[1]);
                 }
 
             }
@@ -71,8 +82,9 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getResult().observe(this, new Observer<Double>() {
             @Override
             public void onChanged(Double ans) {
-                if(viewModel.isAllFiledOk())
-                result_view.setText(Repository.formatAnswer(viewModel.getUnit_2(),ans));
+                if(viewModel.isAllFiledOk()) {
+                    result_view.setText(Repository.formatAnswer(viewModel.getUnit_2(), ans));
+                }
             }
         });
 
@@ -93,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
                 if(editable.toString().length()>0 && editable.toString().trim()!=".") {
                     try {
                         double x = Double.parseDouble(editable.toString());
-//                    Toast.makeText(MainActivity.this, "" + editable.toString(), Toast.LENGTH_SHORT).show();
                         viewModel.setInput_value(x);
                     }catch (Exception e){
                         Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();

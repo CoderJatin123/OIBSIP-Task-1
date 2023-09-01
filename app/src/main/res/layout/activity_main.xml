@@ -15,16 +15,18 @@
         android:layout_marginTop="24dp"
         app:boxStrokeColor="@android:color/transparent"
         app:boxStrokeWidth="0dp"
+        android:background="@drawable/card_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
+            style="@style/CardView"
             android:id="@+id/dropdown_menu"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/dropdown_bg"
             android:inputType="none"
+            android:textColor="@color/text_primary_dark"
             android:lineBreakStyle="none"
             android:text="Type" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -56,7 +58,7 @@
                 android:ems="10"
                 android:hint="0000"
                 android:inputType="number|numberDecimal"
-                android:text="10"
+                android:text="00"
                 android:textColor="@color/white"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -82,12 +84,13 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <AutoCompleteTextView
+
                     android:id="@+id/unit_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+                    android:textColor="@color/text_primary"
                     android:layout_weight="1"
-                    android:background="@drawable/dropdown_bg"
+                    android:background="@drawable/card_bg"
                     android:inputType="none"
                     android:singleLine="true"
                     android:text="Select Unit" />
@@ -124,7 +127,7 @@
                 android:ems="10"
                 android:hint="0000"
                 android:inputType="number|numberDecimal"
-                android:text="1000"
+                android:text="00"
                 android:textColor="@color/white"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -153,9 +156,9 @@
                     android:id="@+id/unit_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+                    android:textColor="@color/text_primary"
                     android:layout_weight="1"
-                    android:background="@drawable/dropdown_bg"
+                    android:background="@drawable/card_bg"
                     android:inputType="none"
                     android:singleLine="true"
                     android:text="Select Unit" />
